@@ -1,6 +1,6 @@
 {
     "name": "@g16/react-base",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "bin": "./tasks/ca.js",
     "license": "UNLICENSED",
     "author": "GHIFARI160"
