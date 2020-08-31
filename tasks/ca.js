@@ -81,7 +81,7 @@ function project_create_babelrc()
 function project_create_webpackConfig()
 {
     var file = `const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: "./src/js/index.js",
@@ -114,9 +114,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new CopyPlugin([
-            { from: "./src", to: "./" }
-        ])
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: "./src", to: "./" }
+            ]
+        })
     ]
 };
 `;
